@@ -5,7 +5,7 @@ Your class project is to come up with software application that does the followi
 
 1. Build and Test an efficient floor plan for a warehouse
 
-2. Uses C# as a SW language
+2. Uses C# (or Python) as a SW language
 
 3. Asks user to input the size of the warehouse in three dimensions
 
