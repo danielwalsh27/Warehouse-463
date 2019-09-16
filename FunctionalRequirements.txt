@@ -6,15 +6,16 @@ Users shall be able to input objects with a name and height, width, and depth di
 Users shall be able to remove objects by providing the name of an object that has already been created.
 
 Object allocation:
-The system shall calculate the object volume and determine if the object will fit within the warehouse.
 The system shall allocate space for the object within the warehouse if there is sufficient empty volume in the warehouse.
 The system shall delete the latest created object if the the total volume of all objects exceed the warehouse volume.
 The system shall add the latest created object if the given dimensions can fit in the warehouse with already existing objects without occupy a cubic unit of space with another object.
+The system shall remove an object if the user gives the name of an existing object to delete.
 
 Display:
 The system shall display input fields for height, width, and depth to set warehouse dimensions.
 The system shall display input fields for height, width, depth, and name to create objects.
 The system shall display an input field for name to remove existing object.
+The system shall notify the user if the given name to remove an object does not exist.
 The system shall display a 3D model of the warehouse and objects stored. 
 The system shall notify the user if there is not sufficient empty volume in the warehouse for the latest created object.
 The system shall update the 3D model with the latest created object if the object is successfully added to the warehouse.
