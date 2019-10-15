@@ -187,16 +187,16 @@ removeObjectName = InputBox("removeObjectName", 1070, 520, 140, 32)
 removeObjectButton = Button("removeObjectButton", 900, 560, 160, 32, onRemoveBoxClicked, "Remove Object")
 
 #Stats UI
-maxAreaST = StaticText("maxAreaST", 900, 620, 100, 32, "Max Area: 0")
-spaceUsedST = StaticText("spaceUsedST", 900, 650, 100, 32, "Space Used: 0")
-spaceRemainingST = StaticText("spaceRemainingST", 900, 680, 100, 32, "Space Remaining: 0")
+maxAreaDT = DynamicText("maxAreaDT", 900, 620, 100, 32, "Max Area: 0")
+spaceUsedDT = DynamicText("spaceUsedDT", 900, 650, 100, 32, "Space Used: 0")
+spaceRemainingDT = DynamicText("spaceRemainingDT", 900, 680, 100, 32, "Space Remaining: 0")
 
 #Error Text UI
 errorText = DynamicText("errorText", 350, 680, 100, 32, "")
 
 inputs = [warehouseHeight, warehouseWidth, warehouseButton, warehouseHeader, warehouseWidthText, warehouseHeightText, createObjectHeader,
 createObjectWidthText, createObjectWidth, createObjectHeightText, createObjectHeight, createObjectButton, createObjectNameText,
-createObjectName, removeObjectHeader, removeObjectNameText, removeObjectName, removeObjectButton, maxAreaST, spaceUsedST, spaceRemainingST,
+createObjectName, removeObjectHeader, removeObjectNameText, removeObjectName, removeObjectButton, maxAreaDT, spaceUsedDT, spaceRemainingDT,
 errorText]
 
 selectedWarehouseIndex = 0
@@ -223,8 +223,8 @@ def main():
             box.draw(screen)
             
         if len(warehouses) > 0:
-            pg.draw.rect(screen, pg.Color(140,140,140), pg.Rect(0, 0, 720, 720), 0) #draw the warehouse
             activeWarehouse = warehouses[selectedWarehouseIndex]
+            pg.draw.rect(screen, pg.Color(140,140,140), pg.Rect(0, 0, activeWarehouse.displayWidth, activeWarehouse.displayHeight), 0) #draw the warehouse
             normalizedBoxes = activeWarehouse.getNormalizedBoxes()
             for box in normalizedBoxes:
                 renderedBox = RenderedBox(box)

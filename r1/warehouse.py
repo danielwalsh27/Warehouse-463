@@ -1,11 +1,21 @@
 from box import box
 
 class warehouse:
-    def __init__(self, w, h, displayWidth, displayHeight):
+    def __init__(self, w, h, maxDisplayWidth, maxDisplayHeight):
         self.width = w
         self.height = h
-        self.displayWidth = displayWidth
-        self.displayHeight = displayHeight
+        self.displayWidth = maxDisplayWidth
+        self.displayHeight = maxDisplayHeight
+        self.heightMultiplier = 1
+        self.widthMultiplier = 1
+        if h > w:
+            self.widthMultiplier = w/h
+            self.heightMultiplier = 1
+            self.displayWidth = self.displayWidth * self.widthMultiplier
+        elif w > h:
+            self.heightMultiplier = h/w
+            self.widthMultiplier = 1
+            self.displayHeight = self.displayHeight * self.heightMultiplier    
         self.area = w*h
         self.boxes = []
     
@@ -28,7 +38,9 @@ class warehouse:
                 self.boxes.remove(box)
                 
     def getNormalizedBoxes(self):
-        normalizationCoefficient = min([(self.displayWidth / self.width), (self.displayHeight / self.height)])
+        widthCoefficient = (self.displayWidth / self.width)
+        heightCoefficient = (self.displayHeight / self.height)
+        normalizationCoefficient = min([widthCoefficient, heightCoefficient])
         renderBoxes = []
         for currentBox in self.boxes:
             normalizedBox = box(currentBox.name, currentBox.x*normalizationCoefficient, currentBox.y*normalizationCoefficient,
