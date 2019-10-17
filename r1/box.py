@@ -13,15 +13,15 @@ class box:
         
     def canFit(box):
         return
-        #can another box fit in this box
+        # can another box fit in this box
     
-    def flip():
+    def flip(self):
         temp = self.width
         self.width = self.height
         self.height = temp
         
-    def largerDimension():
+    def largerDimension(self):
         return max([self.width, self.height])
         
-    def smallerDimension():
+    def smallerDimension(self):
         return min([self.width, self.height])
