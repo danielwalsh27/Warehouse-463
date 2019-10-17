@@ -6,6 +6,7 @@ class Rectangle:
         width_ = 0
         size_ = 0
 
+
 od = OrderedDict()
 length_ = input("Enter Warehouse Length: ")
 length = int(length_)
