@@ -90,7 +90,7 @@ class Button:
 
     def update(self):
         # Resize the box if the text is too long.
-        width = max(200, self.txt_surface.get_width()+10)
+        width = max(100, self.txt_surface.get_width()+10)
         self.rect.w = width
 
     def draw(self, screen):
@@ -148,7 +148,8 @@ class RenderedBox:
 
     def draw(self, screen):
         # Blit the rect.
-        pg.draw.rect(screen, pg.Color(self.box.colorR, self.box.colorG, self.box.colorB, self.box.colorA), pg.Rect(self.box.x, self.box.y, self.box.width, self.box.height), 0)
+        pg.draw.rect(screen, pg.Color(140, 140, 140, self.box.colorA), pg.Rect(self.box.x, self.box.y, self.box.width, self.box.height), 0)
+        pg.draw.rect(screen, pg.Color(self.box.colorR, self.box.colorG, self.box.colorB, self.box.colorA), pg.Rect(self.box.x + 5, self.box.y + 5, self.box.width - 10, self.box.height - 10), 0)
 
 class InteractiveCanvas:
     def __init__(self):
@@ -213,7 +214,7 @@ class InteractiveCanvas:
 def onWarehouseDimensionButtonClicked():
     newWareHouse = warehouse(int(getInputValue("warehouseWidth")), int(getInputValue("warehouseHeight")), 720, 720)
     warehouses.append(newWareHouse)
-    # update ui stats
+    # update UI stats
     UITxtUpdate(newWareHouse)
 
 
@@ -240,6 +241,15 @@ def onRemoveBoxClicked():
         activeWarehouse.removeBox(getInputValue("removeObjectName"))
         # update UI stats
         UITxtUpdate(activeWarehouse)
+        setErrorText("")
+    else:
+        setErrorText("Error: Create a warehouse before removing a box")
+
+def onPrintListClicked():
+    if len(warehouses) > 0:
+        activeWarehouse = warehouses[selectedWarehouseIndex]
+        activeWarehouse.printBoxList()
+        ###
         setErrorText("")
     else:
         setErrorText("Error: Create a warehouse before removing a box")
@@ -295,6 +305,9 @@ maxAreaDT = DynamicText("maxAreaDT", 900, 620, 100, 32, "Max Area: ", '')
 spaceUsedDT = DynamicText("spaceUsedDT", 900, 650, 100, 32, "Space Used: ", '')
 spaceRemainingDT = DynamicText("spaceRemainingDT", 900, 680, 100, 32, "Space Remaining: ", '')
 
+# Setup object list print button
+printList = Button("printListButton", 1150, 680, 160, 32, onPrintListClicked, "Print Box List")
+
 # Error Text UI
 errorText = DynamicText("errorText", 600, 680, 100, 32, "", '')
 
@@ -304,7 +317,7 @@ interactiveCanvas = InteractiveCanvas()
 inputs = [warehouseHeight, warehouseWidth, warehouseButton, warehouseHeader, warehouseWidthText, warehouseHeightText, createObjectHeader,
 createObjectWidthText, createObjectWidth, createObjectHeightText, createObjectHeight, createObjectButton, createObjectNameText,
 createObjectName, removeObjectHeader, removeObjectNameText, removeObjectName, removeObjectButton, maxAreaDT, spaceUsedDT, spaceRemainingDT,
-errorText, warehouseIcon, removeIcon, createIcon, interactiveCanvas]
+errorText, printList, warehouseIcon, removeIcon, createIcon, interactiveCanvas]
 
 selectedWarehouseIndex = 0
 warehouses = []

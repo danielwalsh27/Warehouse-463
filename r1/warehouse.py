@@ -119,6 +119,11 @@ class warehouse:
                     row += "-"
             print(row)
 
+    def printBoxList(self):
+        print("Box List:")
+        for box in self.boxes:
+            print(str(box.name) + ": [" + str(box.x) + ", " + str(box.y) + "]")
+
     def removeBox(self, name):
         for box in self.boxes:
             if box.name == name:
