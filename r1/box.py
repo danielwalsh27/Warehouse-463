@@ -10,6 +10,7 @@ class box:
         self.colorB = colorB
         self.colorA = colorA
         self.area = w*h
+        # self.selected = False
         
     def canFit(box):
         return
