@@ -11,6 +11,7 @@ COLOR_ACTIVE = pg.Color(255, 0, 0)
 COLOR_BUTTON_BG = pg.Color(0, 0, 0)
 FONT = pg.font.Font(None, 25)
 HEADER_FONT = pg.font.Font(None, 32)
+COLOR_CYCLE = [(255,255,255),(255,50,50),(50,255,50),(50,50,255),(255,255,50),(50,255,255),(255,50,255)]
 
 class Graphic:
     def __init__(self, id, asset, x, y, width, height):
@@ -150,6 +151,8 @@ class RenderedBox:
         # Blit the rect.
         pg.draw.rect(screen, pg.Color(140, 140, 140, self.box.colorA), pg.Rect(self.box.x, self.box.y, self.box.width, self.box.height), 0)
         pg.draw.rect(screen, pg.Color(self.box.colorR, self.box.colorG, self.box.colorB, self.box.colorA), pg.Rect(self.box.x + 5, self.box.y + 5, self.box.width - 10, self.box.height - 10), 0)
+        self.txt_surface = FONT.render(self.name, True, pg.Color(0,0,0))
+        screen.blit(self.txt_surface, ((self.box.x+self.box.width/2)-(self.txt_surface.get_width()/2), (self.box.y+self.box.height/2)-5))
 
 class InteractiveCanvas:
     def __init__(self):
@@ -221,7 +224,8 @@ def onWarehouseDimensionButtonClicked():
 def onAddBoxButtonClicked():
     if len(warehouses) > 0:
         activeWarehouse = warehouses[selectedWarehouseIndex]
-        newBox = box(getInputValue("createObjectName"), 0, 0, int(getInputValue("createObjectWidth")), int(getInputValue("createObjectHeight")), 0, 0, 0)
+        color = COLOR_CYCLE[len(activeWarehouse.getboxlist()) % len(COLOR_CYCLE)]
+        newBox = box(getInputValue("createObjectName"), 0, 0, int(getInputValue("createObjectWidth")), int(getInputValue("createObjectHeight")), color[0], color[1], color[2])
         for boxx in activeWarehouse.getboxlist():
             if newBox.name == boxx.name:
                 print("Name already exists. Try another name.")
