@@ -3,6 +3,7 @@ from box import box
 
 class warehouse:
     def __init__(self, w, h, maxDisplayWidth, maxDisplayHeight):
+        self.usedArea = 0
         self.width = w
         self.height = h
         self.displayWidth = maxDisplayWidth
@@ -23,10 +24,10 @@ class warehouse:
         self.normalizationCoefficient = 1
 
     def getRemainingSpace(self):
-        usedArea = 0
+        self.usedArea = 0
         for x in self.boxes:
-            usedArea += x.area
-        return self.area - usedArea
+            self.usedArea += x.area
+        return self.area - self.usedArea
 
     def usedSpace(self):
         return self.area - self.getRemainingSpace()
