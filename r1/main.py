@@ -231,6 +231,7 @@ def onAddBoxButtonClicked():
                 print("Name already exists. Try another name.")
                 setErrorText("Name already exists.")
                 return False
+
         activeWarehouse.addBox(newBox)
         # update UI stats
         UITxtUpdate(activeWarehouse)
@@ -256,7 +257,7 @@ def onPrintListClicked():
         ###
         setErrorText("")
     else:
-        setErrorText("Error: Create a warehouse before removing a box")
+        setErrorText("Error: No Boxes Available")
 
 
 def getInputValue(inputId):
@@ -313,7 +314,7 @@ spaceRemainingDT = DynamicText("spaceRemainingDT", 900, 680, 100, 32, "Space Rem
 printList = Button("printListButton", 1150, 680, 160, 32, onPrintListClicked, "Print Box List")
 
 # Error Text UI
-errorText = DynamicText("errorText", 600, 680, 100, 32, "", '')
+errorText = DynamicText("errorText", 000, 680, 100, 32, "", '')
 
 #Interactive Canvas for moving boxes
 interactiveCanvas = InteractiveCanvas()

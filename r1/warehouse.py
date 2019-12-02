@@ -1,6 +1,7 @@
 from box import box
 
 
+
 class warehouse:
     def __init__(self, w, h, maxDisplayWidth, maxDisplayHeight):
         self.usedArea = 0
@@ -45,7 +46,10 @@ class warehouse:
     def canFit(self, box):  # checks if box can fit into warehouse
         if (box.x * box.y) <= self.getRemainingSpace():
             return True
-        return False
+        else:
+            print("Box Does Not Fit In Warehouse")
+            setErrorText("Box Does Not Fit In Warehouse")
+            return False
 
     def checkFit (self, box, atX, atY):
         # Places top left corner of box at X and Y
