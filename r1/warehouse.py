@@ -127,7 +127,7 @@ class warehouse:
     def printBoxList(self):
         print("Box List:")
         for box in self.boxes:
-            print(str(box.name) + ": [" + str(box.x) + ", " + str(box.y) + "]")
+            print(str(box.name) + ": " + str(box.width) + "x" + str(box.height) + " : [" + str(box.x) + ", " + str(box.y) + "]")
 
     def removeBox(self, name):
         for box in self.boxes:
