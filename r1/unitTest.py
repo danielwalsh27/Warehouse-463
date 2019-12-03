@@ -33,6 +33,7 @@ class TestStringMethods(unittest.TestCase):
         main.warehouseWidth.text = ""
         print("Test 3 PASS")
 
+<<<<<<< HEAD
     def test4_addbox(self):
         print("\nTesting adding boxes, correct positioning")
         dummyhouse = main.warehouse(10, 10, 720, 720)
@@ -73,6 +74,14 @@ class TestStringMethods(unittest.TestCase):
         main.warehouseHeight.text = ""
         main.warehouseWidth.text = ""
         print("Test 7 PASS")
+=======
+    def test_box_delete_if_exist(self):
+        print("Testing deleting existing box")
+        self.assertEqual(len(main.warehouses), 0)
+        main.warehouses = []
+        main.onPrintListClicked()
+        print("Test 4.5 PASS")
+>>>>>>> master
 
 if __name__ == '__main__':
     main.pg.display.iconify()
