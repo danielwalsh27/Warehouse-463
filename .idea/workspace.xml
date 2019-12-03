@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f9cb93a-7266-48f6-adfd-52c447815c2c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r1/warehouse.py" beforeDir="false" afterPath="$PROJECT_DIR$/r1/warehouse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r1/unitTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/r1/unitTest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,12 +77,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3457" />
+          <entry key="py" value="3458" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3457" />
+          <entry key="Python" value="3458" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -103,14 +102,12 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/r1/unitest.py">
+            <entry file="file://$PROJECT_DIR$/r1/unitTest.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="383">
-                  <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+                <state relative-caret-position="459">
+                  <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
-                    <marker date="1575245019214" expanded="true" signature="106:107" ph="..." />
-                    <marker date="1575245019214" expanded="true" signature="106:112" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -119,11 +116,10 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/r1/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4335">
-                  <caret line="258" selection-start-line="258" selection-end-line="258" />
+                <state relative-caret-position="4420">
+                  <caret line="263" selection-start-line="263" selection-end-line="263" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
-                    <marker date="1571781292299" expanded="true" signature="10234:10484" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -155,11 +151,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/r1/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="289" column="20" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="20" />
+                <state relative-caret-position="373">
+                  <caret line="294" column="20" selection-start-line="294" selection-start-column="20" selection-end-line="294" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
-                    <marker date="1571781292299" expanded="true" signature="10234:10484" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -168,8 +163,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/r1/warehouse.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="646">
-                  <caret line="38" selection-start-line="38" selection-end-line="38" />
+                <state relative-caret-position="680">
+                  <caret line="40" selection-start-line="40" selection-end-line="40" />
                 </state>
               </provider>
             </entry>
@@ -212,6 +207,7 @@
         <option value="$PROJECT_DIR$/r1/main.py" />
         <option value="$PROJECT_DIR$/r1/warehouse.py" />
         <option value="$PROJECT_DIR$/r1/unitest.py" />
+        <option value="$PROJECT_DIR$/r1/unitTest.py" />
       </list>
     </option>
   </component>
@@ -262,7 +258,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.unitest">
+  <component name="RunManager" selected="Python tests.Unittests in unitTest.py">
     <configuration name="Warehouse" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Warehouse-463-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -347,14 +343,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in unitTest.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Warehouse-463-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/r1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/r1/unitTest.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Warehouse" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.warehouse" />
       <item itemvalue="Python.unitest" />
+      <item itemvalue="Python tests.Unittests in unitTest.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in unitTest.py" />
         <item itemvalue="Python.unitest" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.warehouse" />
@@ -374,6 +386,11 @@
       <updated>1570069279102</updated>
     </task>
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_unitTest_py - 2019.12.02 at 20h 10m 10s.xml">
+      <configuration name="Unittests in unitTest.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -423,8 +440,6 @@
           <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1575245019214" expanded="true" signature="106:107" ph="..." />
-            <marker date="1575245019214" expanded="true" signature="106:112" ph="..." />
           </folding>
         </state>
       </provider>
@@ -446,19 +461,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/r1/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="289" column="20" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="20" />
+        <state relative-caret-position="4420">
+          <caret line="263" selection-start-line="263" selection-end-line="263" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1571781292299" expanded="true" signature="10234:10484" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/r1/warehouse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="680">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
