@@ -18,6 +18,20 @@ class TestStringMethods(unittest.TestCase):
         main.warehouseHeight.text = ""
         main.warehouseWidth.text = ""
         print("Test 2 PASS")
+        
+    def test_3_testMaxArea_spaceUsed_spaceRemaining(self):
+        print("Testing Max Area, Space Used & Space Remaining")
+        main.warehouseWidth.text = 15
+        main.warehouseHeight.text = 15
+        main.onWarehouseDimensionButtonClicked()
+        main.warehouses[0].getRemainingSpace()
+        main.warehouses[0].usedSpace()
+        self.assertEqual(main.warehouses[0].area, 225)
+        self.assertEqual(main.warehouses[0].usedArea, 0)
+        main.warehouses = []
+        main.warehouseHeight.text = ""
+        main.warehouseWidth.text = ""
+        print("Test 3 PASS")
 
 if __name__ == '__main__':
     main.pg.display.iconify()
