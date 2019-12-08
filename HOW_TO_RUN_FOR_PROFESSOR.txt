@@ -1,0 +1,1 @@
+Simply double click the "RUN_APPLICATION.bat" file on a windows environment.

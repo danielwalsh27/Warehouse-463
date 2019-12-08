@@ -9,8 +9,8 @@ screen = pg.display.set_mode((1280, 720))
 COLOR_INACTIVE = pg.Color(100, 100, 100)
 COLOR_ACTIVE = pg.Color(255, 0, 0)
 COLOR_BUTTON_BG = pg.Color(0, 0, 0)
-FONT = pg.font.Font(None, 25)
-HEADER_FONT = pg.font.Font(None, 32)
+FONT = pg.font.Font("Arial.ttf", 18)
+HEADER_FONT = pg.font.Font("Arial.ttf", 24)
 COLOR_CYCLE = [(255,255,255),(255,50,50),(50,255,50),(50,50,255),(255,255,50),(50,255,255),(255,50,255)]
 
 class Graphic:
