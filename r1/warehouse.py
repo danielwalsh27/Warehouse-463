@@ -48,7 +48,6 @@ class warehouse:
             return True
         else:
             print("Box Does Not Fit In Warehouse")
-            setErrorText("Box Does Not Fit In Warehouse")
             return False
 
     def checkFit (self, box, atX, atY):
@@ -74,7 +73,6 @@ class warehouse:
         for boxx in self.boxes:
             if box.name == boxx.name:
                 print("Name already exists. Try another name.")
-                setErrorText("Name already exists. Try another name.")
                 return False
 
         for y in range(self.height):    # exhaustively search grid for empty spot
